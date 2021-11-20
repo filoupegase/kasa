@@ -2,7 +2,7 @@ function AboutUs() {
 
   return (
     <div>
-      <h1>A propos 🧮</h1>
+      <h1>A Propos 🎎</h1>
     </div>
   )
 }
