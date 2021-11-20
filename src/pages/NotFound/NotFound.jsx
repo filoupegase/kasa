@@ -5,9 +5,10 @@ function NotFound() {
 
   return (
     <>
-      <h1>404 error</h1>
+      <h1>404</h1>
+      <h2>Oups! La page de que vous demander n'existe pas</h2>
       <h3>
-        No match for <code>{location.pathname}</code>
+        Pas de route pour <code>{location.pathname}</code>
       </h3>
     </>
   );
