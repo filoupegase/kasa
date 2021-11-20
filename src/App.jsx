@@ -5,6 +5,7 @@ import Header from "./pages/Header/Header";
 import NotFound from "./pages/NotFound/NotFound";
 import Housing from "./pages/Housing/Housing";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import Footer from "./_component/Footer/Fouter";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/about-us" element={<AboutUs />} strict exact />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </>
   );
 };

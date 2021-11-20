@@ -1,0 +1,11 @@
+@import "./src/assets/style/scss/variables";
+
+.footer {
+  text-align: center;
+  background-color: $black;
+  padding: 30px;
+}
+
+.text-copyrights {
+  color: $white
+}
