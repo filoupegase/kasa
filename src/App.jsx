@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import Housing from "./pages/Housing/Housing";
 import AboutUs from "./pages/AboutUs";
 import "./assets/style/scss/_common.scss";
+import Footer from "./_component/Footer";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 };
