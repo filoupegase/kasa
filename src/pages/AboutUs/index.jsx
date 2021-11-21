@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Collapse from "../../_component/Collapse";
 import Banner from "../../_component/Banner";
+import ImageMountain from "../../assets/images/mountain-landscape.jpeg";
 
 
 const ABOUT_DATA = [
@@ -26,9 +27,10 @@ class AboutUs extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <Banner
-          title="Banner"
+          imgSource={ImageMountain}
+          altText="Un paysage de montagne"
         />
         {ABOUT_DATA.map(({ title, collapsContent }, index) => (
           <Collapse
@@ -36,7 +38,7 @@ class AboutUs extends Component {
             title={title}
             textArray={collapsContent}
           />))}
-      </div>
+      </>
     );
   };
 }
