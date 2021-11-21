@@ -4,7 +4,7 @@ import Home from "./pages/Home/Home";
 import Header from "./pages/Header";
 import NotFound from "./pages/NotFound/NotFound";
 import Housing from "./pages/Housing/Housing";
-import AboutUs from "./pages/AboutUs/AboutUs";
+import AboutUs from "./pages/AboutUs";
 import Footer from "./_component/Footer";
 import "./assets/style/scss/_common.scss";
 
