@@ -5,7 +5,6 @@ import Header from "./pages/Header";
 import NotFound from "./pages/NotFound/NotFound";
 import Housing from "./pages/Housing/Housing";
 import AboutUs from "./pages/AboutUs";
-import Footer from "./_component/Footer";
 import "./assets/style/scss/_common.scss";
 
 
@@ -21,7 +20,6 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
-      <Footer />
     </>
   );
 };

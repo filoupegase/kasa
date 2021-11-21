@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Collapse from "../../_component/Collapse";
 import Banner from "../../_component/Banner";
 import ImageMountain from "../../assets/images/mountain-landscape.jpeg";
+import "./AboutUs.scss";
 
 
 const ABOUT_DATA = [
@@ -32,12 +33,14 @@ class AboutUs extends Component {
           imgSource={ImageMountain}
           altText="Un paysage de montagne"
         />
-        {ABOUT_DATA.map(({ title, collapsContent }, index) => (
-          <Collapse
-            key={index}
-            title={title}
-            textArray={collapsContent}
-          />))}
+        <div className="container-about">
+          {ABOUT_DATA.map(({ title, collapsContent }, index) => (
+            <Collapse
+              key={index}
+              title={title}
+              textArray={collapsContent}
+            />))}
+        </div>
       </>
     );
   };
