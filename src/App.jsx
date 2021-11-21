@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Header from "./pages/Header/Header";
+import Header from "./pages/Header";
 import NotFound from "./pages/NotFound/NotFound";
 import Housing from "./pages/Housing/Housing";
 import AboutUs from "./pages/AboutUs/AboutUs";
-import Footer from "./_component/Footer/Fouter";
+import Footer from "./_component/Footer";
 
 const App = () => {
   return (
