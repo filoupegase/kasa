@@ -21,11 +21,11 @@ class Collapse extends Component {
     const collapseIcon = `fas fa-chevron-${this.state.isOpen ? "up" : "down"}`;
     return (
       <>
-        <div className="collapse">
+        <div onClick={this.updateIsOpen} className="collapse">
           <h2 className="collapse-header">
             {this.props.title}
           </h2>
-          <span onClick={this.updateIsOpen} style={{ cursor: "pointer", fontSize: 28 }} className={collapseIcon} />
+          <span style={{ fontSize: 28 }} className={collapseIcon} />
         </div>
         <div className={`collapse-hidden ${this.state.isOpen ? "is-open" : "is-close"}`}>
           <p>{this.props.textArray}</p>
