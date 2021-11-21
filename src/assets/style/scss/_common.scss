@@ -1,0 +1,11 @@
+@import "variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 89%;
+  @media (min-width: $breakpoint-small) {
+    width: 84%;
+  }
+}
