@@ -1,20 +1,39 @@
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import "./header.scss";
 
 
-const Header = () => {
-  return (
-    <nav>
-      <Link to="/">
-        <img className="header-logo" src={logo} alt="logo" />
-      </Link>
-      <div className="navlink">
-        <Link to="/">Accueil</Link>
-        <Link to="/about-us">A Propos</Link>
-      </div>
-    </nav>
-  );
-};
+class Header extends Component {
+  render() {
+    return (
+      <header>
+        <Link to="/">
+          <img className="header-logo" src={logo} alt="logo" />
+        </Link>
+        <nav className="main-nav">
+          <ul>
+            <li>
+              <NavLink
+                className="header-link"
+                to="/"
+              >
+                Accueil
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="header-link"
+                to="/about-us"
+              >
+                &Agrave; propos
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    );
+  };
+}
 
 export default Header;
