@@ -1,6 +1,6 @@
 import React from "react";
-import logo from '../../assets/images/logo.svg';
-import './Home.css';
+import logo from "../../assets/images/logo.svg";
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -21,6 +21,6 @@ const Home = () => {
       </header>
     </div>
   );
-}
+};
 
 export default Home;
