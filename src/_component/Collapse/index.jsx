@@ -10,19 +10,26 @@ class Collapse extends Component {
     this.state = {
       isOpen: false
     };
+    this.updateIsOpen = this.updateIsOpen.bind(this);
+  }
+
+  updateIsOpen() {
+    this.setState({ isOpen: !this.state.isOpen });
   }
 
   render() {
-    const collapseIcon = "fas fa-chevron-down";
+    const collapseIcon = `fas fa-chevron-${this.state.isOpen ? "up" : "down"}`;
     return (
       <>
-        <div className="collapse">
+        <div className="collapse-header">
           <h2 style={{ margin: 0, fontWeight: 400 }}>
             {this.props.title}
           </h2>
-          <span style={{ height: 24, cursor: "pointer" }} className={collapseIcon} />
+          <span onClick={this.updateIsOpen} style={{ cursor: "pointer", fontSize: 28 }} className={collapseIcon} />
         </div>
-        <p>{this.props.textArray}</p>
+        <div className="collapse-hidden">
+          <p>{this.props.textArray}</p>
+        </div>
       </>
     );
   }
