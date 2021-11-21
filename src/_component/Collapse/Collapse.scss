@@ -1,6 +1,6 @@
 @import "src/assets/style/scss/variables";
 
-.collapse-header {
+.collapse {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -10,9 +10,18 @@
   color: $white;
 }
 
+.collapse-header {
+  margin: 0;
+  font-weight: 400
+}
+
 .collapse-hidden {
   background-color: $grey-light;
   color: $primary;
-  padding: 7px 20px;
+  padding: 6px 20px 2px 20px;
   border-radius: 10px;
+}
+
+.collapse-hidden.is-close {
+  display: none;
 }
