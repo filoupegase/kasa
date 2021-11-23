@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Header from "./pages/Header";
-import NotFound from "./pages/NotFound/NotFound";
+import NotFound from "./pages/NotFound";
 import Housing from "./pages/Housing/Housing";
 import AboutUs from "./pages/AboutUs";
 import "./assets/style/scss/_common.scss";

@@ -5,7 +5,6 @@ import ImageCoast from "../../assets/images/coast-landscape.jpeg";
 
 
 class Home extends Component {
-
   render() {
     return (
       <>

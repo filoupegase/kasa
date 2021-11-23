@@ -16,14 +16,13 @@
 }
 
 .App-header {
-  background-color: $grey-light;
+  background-color: #0000;
   min-height: 100vh;
   border-radius: 25px;
   padding: 10px;
-}
-
-.App-link {
-  color: #61dafb;
+  @media (min-width: $breakpoint-mobile) {
+    background-color: $grey-light;
+  }
 }
 
 @keyframes App-logo-spin {
