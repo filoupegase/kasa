@@ -16,13 +16,25 @@
 }
 
 .App-header {
+  min-height: 20rem;
+  padding: 1.5rem;
   background-color: #0000;
-  min-height: 100vh;
   border-radius: 25px;
-  padding: 10px;
   @media (min-width: $breakpoint-mobile) {
     background-color: $grey-light;
   }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.ul-gallery {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 @keyframes App-logo-spin {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Home.scss";
 import Banner from "../../_component/Banner";
 import ImageCoast from "../../assets/images/coast-landscape.jpeg";
+import Card from "../../_component/Card";
 
 
 class Home extends Component {
@@ -15,6 +16,46 @@ class Home extends Component {
         />
         <div className="Home">
           <div className="App-header">
+            <Card
+              imgSource={ImageCoast}
+              altText="image de côte"
+              title="Titre de la location"
+            />
+            <Card
+              imgSource={ImageCoast}
+              altText="image de côte"
+              title="Titre de la location"
+            />
+            <Card
+              imgSource={ImageCoast}
+              altText="image de côte"
+              title="Titre de la location"
+            />
+            <Card
+              imgSource={ImageCoast}
+              altText="image de côte"
+              title="Titre de la location"
+            />
+            <Card
+              imgSource={ImageCoast}
+              altText="image de côte"
+              title="Titre de la location"
+            />
+            <Card
+              imgSource={ImageCoast}
+              altText="image de côte"
+              title="Titre de la location"
+            />
+            <Card
+              imgSource={ImageCoast}
+              altText="image de côte"
+              title="Titre de la location"
+            />
+            <Card
+              imgSource={ImageCoast}
+              altText="image de côte"
+              title="Titre de la location"
+            />
           </div>
         </div>
       </>
