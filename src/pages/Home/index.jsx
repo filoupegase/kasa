@@ -15,16 +15,14 @@ class Home extends Component {
           title="Chez vous, partout et ailleurs"
         />
         <div className="Home">
-          <div className="App-header">
+          <div className="Home-header">
             <Card
               imgSource={ImageCoast}
               altText="image de côte"
-              title="Titre de la location"
             />
             <Card
               imgSource={ImageCoast}
               altText="image de côte"
-              title="Titre de la location"
             />
             <Card
               imgSource={ImageCoast}

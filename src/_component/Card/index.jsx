@@ -9,12 +9,12 @@ class Card extends Component {
   render() {
     return (
       <>
-          <article className="card-body">
-            <Link to="/">
+        <article className="card-body">
+          <Link to="/">
             <img className="card-image" src={this.props.imgSource} alt={this.props.altText} />
             <p className="card-title">{this.props.title}</p>
-            </Link>
-          </article>
+          </Link>
+        </article>
       </>
     );
   }
@@ -23,7 +23,11 @@ class Card extends Component {
 Card.propTypes = {
   imgSource: PropTypes.string.isRequired,
   altText: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string
+};
+
+Card.defaultProps = {
+  title: "titre de la \n location"
 };
 
 export default Card;

@@ -4,24 +4,14 @@
   margin-top: 45px;
 }
 
-.App-logo {
-  height: 5vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.Home-header {
   height: auto;
-  padding: 1.5rem;
+  padding: 0;
   background-color: #0000;
   border-radius: 25px;
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: $breakpoint-tablet) {
     background-color: $grey-light;
+    padding: 1.5rem;
   }
 }
 

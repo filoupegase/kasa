@@ -4,13 +4,16 @@
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
-  width: 21.25rem;
-  height: 21.25rem;
+  height: 255px;
   transition: transform 450ms;
   mix-blend-mode: darken;
   background: black;
   :hover {
     transform: scale(1.1);
+  }
+  @media (min-width: $breakpoint-mobile) {
+    width: 340px;
+    height: 340px;
   }
 }
 
