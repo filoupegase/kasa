@@ -2,12 +2,16 @@
 
 .card-body {
   position: relative;
-  margin: 1.5rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  background: $primary;
   width: 21.25rem;
   height: 21.25rem;
+  transition: transform 450ms;
+  mix-blend-mode: darken;
+  background: black;
+  :hover {
+    transform: scale(1.1);
+  }
 }
 
 .card-image {
@@ -19,6 +23,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 0.8;
 }
 
 .card-title {
