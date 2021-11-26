@@ -39,7 +39,7 @@ export class PropertyApartment {
 export class PropertyAdvertisementsList {
   /**
    * @constructs
-   * @param {Array.PropertyApartment} advertisements
+   * @param {*[]} advertisements
    */
   constructor(advertisements) {
     this.advertisements = advertisements;
