@@ -7,6 +7,7 @@ import Housing from "./pages/Housing/Housing";
 import AboutUs from "./pages/AboutUs";
 import "./assets/style/scss/_common.scss";
 import Footer from "./_component/Footer";
+import { DataFetcher } from "./data/dataFetcher";
 
 
 class App extends Component {

@@ -1,11 +1,17 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./Home.scss";
 import Banner from "../../_component/Banner";
 import ImageCoast from "../../assets/images/coast-landscape.jpeg";
 import Card from "../../_component/Card";
+import { PropertyApartment } from "../../data/propertyApartment";
 
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <>
@@ -60,5 +66,9 @@ class Home extends Component {
     );
   };
 }
+
+Home.propTypes = {
+  advertisements: PropTypes.arrayOf(PropTypes.instanceOf(PropertyApartment)).isRequired
+};
 
 export default Home;
