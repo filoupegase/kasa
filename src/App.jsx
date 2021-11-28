@@ -11,6 +11,7 @@ import Footer from "./_component/Footer";
 
 class App extends Component {
   render() {
+    console.log("here:", this.props.advertisementsList.advertisements);
     return (
       <>
         <div className="container">

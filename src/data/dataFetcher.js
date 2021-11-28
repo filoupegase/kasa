@@ -1,6 +1,6 @@
 import {
-  PropertyAdvertisement,
-  PropertyAdvertisementsList
+  PropertyApartment,
+  PropertyApartmentList
 } from "./propertyApartment";
 
 
@@ -11,14 +11,14 @@ export class DataFetcher {
 
   /**
    * Fetch the data and return the contents as a PropertyAdvertisementsList if the fetching is ok.
-   * @returns {PropertyAdvertisementsList}
+   * @returns {PropertyApartmentList}
    */
   async fetchSource() {
     let response = await fetch(this._dataSource, {
       headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json",
-      },
+        "Accept": "application/json"
+      }
     });
 
     if (response.ok) {
@@ -27,7 +27,7 @@ export class DataFetcher {
       const advertisementInstances = [];
 
       for (let advertisement of data) {
-        const advertisementInstance = new PropertyAdvertisement(
+        const advertisementInstance = new PropertyApartment(
           advertisement.id,
           advertisement.title,
           advertisement.cover,
@@ -43,7 +43,7 @@ export class DataFetcher {
         advertisementInstances.push(advertisementInstance);
       }
 
-      return new PropertyAdvertisementsList(advertisementInstances);
+      return new PropertyApartmentList(advertisementInstances);
     } else {
       const message = `Oups ! Une erreur s'est produite.\n\nHTTP-Error-${response.status} while fetching ${this._dataSource}`;
 

@@ -9,12 +9,12 @@ import { DataFetcher } from "./data/dataFetcher";
 
 async function initApp(dataFetcher) {
   const advertisementsList = await dataFetcher.fetchSource();
-  console.log('advertisementsList', advertisementsList);
+  console.log("advertisementsList", advertisementsList);
 
   ReactDOM.render(
     <React.StrictMode>
       <Router>
-        <App advertisementsList />
+        <App advertisementsList={advertisementsList} />
       </Router>
     </React.StrictMode>,
     document.getElementById("root")
