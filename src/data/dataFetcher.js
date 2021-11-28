@@ -1,14 +1,10 @@
 import {
-  PropertyApartment,
+  PropertyAdvertisement,
   PropertyAdvertisementsList
 } from "./propertyApartment";
 
 
 export class DataFetcher {
-  /**
-   * @constructs
-   * @param {string} dataSource
-   */
   constructor(dataSource) {
     this._dataSource = dataSource;
   }
@@ -18,35 +14,40 @@ export class DataFetcher {
    * @returns {PropertyAdvertisementsList}
    */
   async fetchSource() {
-    let response = await fetch(this._dataSource);
+    let response = await fetch(this._dataSource, {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+    });
 
     if (response.ok) {
       let data = await response.json();
 
-      const appartementInstances = [];
+      const advertisementInstances = [];
 
-      for (let appartement of data) {
-        const appartementInstance = new PropertyApartment(
-          appartement.id,
-          appartement.title,
-          appartement.cover,
-          appartement.pictures,
-          appartement.description,
-          appartement.host,
-          appartement.rating,
-          appartement.location,
-          appartement.equipments,
-          appartement.tags
+      for (let advertisement of data) {
+        const advertisementInstance = new PropertyAdvertisement(
+          advertisement.id,
+          advertisement.title,
+          advertisement.cover,
+          advertisement.pictures,
+          advertisement.description,
+          advertisement.host,
+          advertisement.rating,
+          advertisement.location,
+          advertisement.equipments,
+          advertisement.tags
         );
-        appartementInstances.push(appartementInstance);
+
+        advertisementInstances.push(advertisementInstance);
       }
 
-      return new PropertyAdvertisementsList(appartementInstances);
-
+      return new PropertyAdvertisementsList(advertisementInstances);
     } else {
-      const messageError = `Oups ! Une erreur s'est produite.\\n\\nHTTP-Error-${response.status} while fetching ${this._dataSource}`;
+      const message = `Oups ! Une erreur s'est produite.\n\nHTTP-Error-${response.status} while fetching ${this._dataSource}`;
 
-      window.alert(messageError);
+      window.alert(message);
     }
   }
 }

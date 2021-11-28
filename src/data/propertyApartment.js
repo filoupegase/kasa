@@ -1,4 +1,4 @@
-export class PropertyApartment {
+export class PropertyAdvertisement {
   /**
    * @constructs
    * @param {string} id
@@ -22,7 +22,8 @@ export class PropertyApartment {
     rating,
     location,
     equipments,
-    tags) {
+    tags
+  ) {
     this.id = id;
     this.title = title;
     this.cover = cover;
@@ -39,13 +40,29 @@ export class PropertyApartment {
 export class PropertyAdvertisementsList {
   /**
    * @constructs
-   * @param {*[]} advertisements
+   * @param {Array.PropertyAdvertisement} advertisements
    */
   constructor(advertisements) {
     this.advertisements = advertisements;
   }
 
+  /**
+   * @param {number} id
+   * @returns {(null|PropertyAdvertisement)}
+   */
   findById(id) {
-    return this.advertisements.find((ad) => ad.id === id);
+    const advertisementsAssociatedToId = this.advertisements.find(
+      (ad) => ad.id === id
+    );
+
+    return advertisementsAssociatedToId;
   }
 }
+
+// , {
+//   headers : {
+//     'Content-Type': 'application/json',
+//       'Accept': 'application/json'
+//   }
+// });
+// const DATA_SOURCE = "../public/data.json";
