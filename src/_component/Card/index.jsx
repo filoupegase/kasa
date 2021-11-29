@@ -5,14 +5,17 @@ import "./Card.scss";
 
 
 class Card extends Component {
-
   render() {
+    const { id, cover, title, location } = this.props;
     return (
       <>
         <article className="card-body">
-          <Link to="/">
-            <img className="card-image" src={this.props.imgSource} alt={this.props.altText} />
-            <p className="card-title">{this.props.title}</p>
+          <Link to={`/housing/${id}`}>
+            <img className="card-image" src={cover}
+                 alt={`Une location située en ${location}`}
+                 onClick={() => window.scrollTo(0, 0)}
+            />
+            <p className="card-title">{title}</p>
           </Link>
         </article>
       </>
@@ -21,9 +24,10 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  imgSource: PropTypes.string.isRequired,
-  altText: PropTypes.string.isRequired,
-  title: PropTypes.string
+  id: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  location: PropTypes.string
 };
 
 Card.defaultProps = {

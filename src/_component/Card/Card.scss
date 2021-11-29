@@ -8,17 +8,12 @@
   transition: transform 450ms;
   mix-blend-mode: darken;
   background: black;
-  :hover {
-    transform: scale(1.1);
-  }
   @media (min-width: $breakpoint-mobile) {
-    width: 340px;
     height: 340px;
   }
 }
 
 .card-image {
-  transition: all 1.6s cubic-bezier(0.19, 1, 0.22, 1);
   position: absolute;
   top: 0;
   left: 0;
