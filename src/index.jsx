@@ -9,7 +9,7 @@ import { DataFetcher } from "./data/dataFetcher";
 
 async function initApp(dataFetcher) {
   const advertisementsList = await dataFetcher.fetchSource();
-  console.log("advertisementsList", advertisementsList);
+  // console.log("advertisementsList", advertisementsList);
 
   ReactDOM.render(
     <React.StrictMode>
