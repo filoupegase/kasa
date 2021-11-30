@@ -1,10 +1,55 @@
 @import "src/assets/style/scss/variables";
 
 
+.housing_header {
+  display: block;
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.housing_title {
+  font-weight: 500;
+  font-size: 36px;
+  color: $primary;
+  margin-bottom: 4px;
+  margin-top: auto;
+}
+
+.housing_location {
+  font-size: 18px;
+  color: $primary;
+  font-weight: 500;
+  margin-top: 11px;
+}
+
+.housing_tag {
+  display: inline-block;
+  margin: 0.25rem 1rem 0.25rem 0;
+  padding: 0.25rem 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: $primary;
+}
+
+.housing_header-name-picture {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 103px;
+  @media (min-width: $breakpoint-tablet) {
+    width: auto;
+  }
+}
+
 .housing_rating i {
   margin: 0 0 0 0.5rem;
   color: #E3E3E3;
-  font-size: 24px;
+  font-size: 15px;
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 30px;
+  }
 }
 
 .housing_rating i.colored {
@@ -12,7 +57,37 @@
 }
 
 .housing_picture-rounded {
-  height: 64px;
-  width: 64px;
+  height: 32px;
+  width: 32px;
   border-radius: 40px;
+  @media (min-width: $breakpoint-tablet) {
+    height: 72px;
+    width: 72px;
+  }
 }
+
+.housing_name {
+  color: $primary;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 15px;
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 21px;
+    margin: 0 0 0 0;
+  }
+}
+
+.housing_star-name {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: $breakpoint-tablet) {
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-content: baseline;
+    justify-content: space-between;
+  }
+}
+

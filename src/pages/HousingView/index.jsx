@@ -22,31 +22,43 @@ class HousingView extends Component {
         <main>
           <Caroussel />
           <section>
-            <header>
-              <h1>{housing.title}</h1>
-              <p>{housing.location}</p>
-              {housing.tags.map((tag) => (
-                <span key={`tag-${tag}`}>
+            <div className="housing_header">
+              <div>
+                <h1 className="housing_title">{housing.title}</h1>
+                <h3 className="housing_location">{housing.location}</h3>
+                <div className="housing_tag-box">
+                  {housing.tags.map((tag) => (
+                    <span className="housing_tag" key={`tag-${tag}`}>
                     {tag}
                   </span>))}
-              <p>{housing.host.name}</p>
-              <img
-                className="housing_picture-rounded"
-                src={housing.host.picture}
-                alt={housing.host.name}
-              />
-              <div className="housing_rating">
-                {ratingScale.map((scale) => (
-                  <i
-                    className={`fas fa-star${
-                      scale <= housing.rating ? " colored" : ""}`}
-                    key={`star-${scale}`}
-                  />
-                ))}
+                </div>
               </div>
-            </header>
-            <Collapse title="description" textArray={[housing.description]} />
-            <Collapse title="equipments" textArray={housing.equipments} />
+              <div
+                className="housing_star-name"
+              >
+                <div className="housing_header-name-picture">
+                  <p className="housing_name">{housing.host.name}</p>
+                  <img
+                    className="housing_picture-rounded"
+                    src={housing.host.picture}
+                    alt={housing.host.name}
+                  />
+                </div>
+                <div className="housing_rating">
+                  {ratingScale.map((scale) => (
+                    <i
+                      className={`fas fa-star${
+                        scale <= housing.rating ? " colored" : ""}`}
+                      key={`star-${scale}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="housing_collapse-block">
+              <Collapse title="description" textArray={[housing.description]} />
+              <Collapse title="equipments" textArray={housing.equipments} />
+            </div>
           </section>
         </main>
       </>

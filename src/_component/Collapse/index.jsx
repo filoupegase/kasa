@@ -29,7 +29,9 @@ class Collapse extends Component {
             <span style={{ fontSize: 28 }} className={collapseIcon} />
           </div>
           <div className={`collapse-hidden ${this.state.isOpen ? "is-open" : "is-close"}`}>
-            <p>{this.props.textArray}</p>
+            <ul>
+              <li>{this.props.textArray}</li>
+            </ul>
           </div>
         </div>
       </>
@@ -39,7 +41,7 @@ class Collapse extends Component {
 
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
-  textArray: PropTypes.arrayOf(PropTypes.string).isRequired,
+  textArray: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default Collapse;
