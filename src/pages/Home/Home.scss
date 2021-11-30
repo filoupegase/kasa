@@ -14,12 +14,13 @@
   padding: 0;
   background-color: #0000;
   border-radius: 25px;
+  margin-bottom: 50px;
   @media (min-width: $breakpoint-tablet) {
     background-color: $grey-light;
     padding: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (min-width:$breakpoint-desktop) {
+  @media (min-width: $breakpoint-desktop) {
     grid-template-columns: repeat(3, 1fr);
   }
 }

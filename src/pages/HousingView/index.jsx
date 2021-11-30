@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Caroussel from "../../_component/Caroussel";
 import NotFound from "../NotFound";
 import Collapse from "../../_component/Collapse";
+import Carousel from "../../_component/Caroussel";
 import "./HousingView.scss";
 
 
@@ -20,7 +20,11 @@ class HousingView extends Component {
     return (
       <>
         <main>
-          <Caroussel />
+          <div
+            style={{ marginBottom: 20 }}
+          >
+            <Carousel pictures={housing.pictures} />
+          </div>
           <section>
             <div className="housing_header">
               <div>
@@ -55,7 +59,7 @@ class HousingView extends Component {
                 </div>
               </div>
             </div>
-            <div className="housing_collapse-block">
+            <div style={{ marginBottom: 200 }}>
               <Collapse title="description" textArray={[housing.description]} />
               <Collapse title="equipments" textArray={housing.equipments} />
             </div>

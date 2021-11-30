@@ -6,7 +6,6 @@ import "./Collapse.scss";
 class Collapse extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       isOpen: false
     };
@@ -29,9 +28,7 @@ class Collapse extends Component {
             <span style={{ fontSize: 28 }} className={collapseIcon} />
           </div>
           <div className={`collapse-hidden ${this.state.isOpen ? "is-open" : "is-close"}`}>
-            <ul>
-              <li>{this.props.textArray}</li>
-            </ul>
+            <p>{this.props.textArray}</p>
           </div>
         </div>
       </>

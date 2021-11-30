@@ -8,7 +8,6 @@ import { PropertyApartment } from "../../data/propertyApartment";
 
 
 class Home extends Component {
-
   componentDidMount() {
     window.scrollTo(0, 0);
   }
