@@ -38,7 +38,7 @@ class AboutUs extends Component {
             <Collapse
               key={index}
               title={title}
-              textArray={collapsContent}
+              textArray={[collapsContent]}
             />))}
         </div>
       </>
