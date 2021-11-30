@@ -7,7 +7,8 @@ class HousingView extends Component {
   render() {
     const { id, advertisementsList } = this.props;
     const advertisementToDisplay = advertisementsList.findById(id);
-    const ad = advertisementToDisplay;
+    const housing = advertisementToDisplay;
+    console.log(housing);
 
     if (!advertisementToDisplay) {
       return <NotFound />;
@@ -16,7 +17,7 @@ class HousingView extends Component {
     return (
       <>
         <Caroussel />
-        <h2>{ad.title}</h2>
+        <h2>{housing.title}</h2>
       </>
     );
   }
