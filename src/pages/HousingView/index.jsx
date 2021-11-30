@@ -31,6 +31,7 @@ class HousingView extends Component {
                   </span>))}
               <p>{housing.host.name}</p>
               <img
+                className="housing_picture-rounded"
                 src={housing.host.picture}
                 alt={housing.host.name}
               />

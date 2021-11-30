@@ -10,3 +10,9 @@
 .housing_rating i.colored {
   color: $primary;
 }
+
+.housing_picture-rounded {
+  height: 64px;
+  width: 64px;
+  border-radius: 40px;
+}
