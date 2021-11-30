@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import Banner from "../../_component/Banner";
 import ImageCoast from "../../assets/images/coast-landscape.jpeg";
 import Card from "../../_component/Card";
-import "./Home.scss";
 import { PropertyApartment } from "../../data/propertyApartment";
+import "./Home.scss";
 
 
 class Home extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NotFound from "../NotFound";
 import Collapse from "../../_component/Collapse";
-import Carousel from "../../_component/Caroussel";
+import Carousel from "../../_component/Carousel";
 import "./HousingView.scss";
 
 

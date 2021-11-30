@@ -5,8 +5,8 @@ import Header from "./pages/Header";
 import NotFound from "./pages/NotFound";
 import Housing from "./pages/Housing";
 import AboutUs from "./pages/AboutUs";
-import "./assets/style/scss/_common.scss";
 import Footer from "./_component/Footer";
+import "./assets/style/scss/_common.scss";
 
 
 class App extends Component {
@@ -18,7 +18,9 @@ class App extends Component {
         <div className="container">
           <Header />
           <Routes>
-            <Route path="/" element={<Home advertisements={advertisementsList.advertisements} />} strict exact />
+            <Route path="/" element={
+              <Home advertisements={advertisementsList.advertisements} />}
+                   strict exact />
             <Route path="/housing/:id" element={
               <Housing advertisementsList={advertisementsList} />} strict exact />
             <Route path="/about-us" element={<AboutUs />} strict exact />
